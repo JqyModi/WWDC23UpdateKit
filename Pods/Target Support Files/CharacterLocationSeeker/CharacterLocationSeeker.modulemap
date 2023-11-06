@@ -1,0 +1,6 @@
+framework module CharacterLocationSeeker {
+  umbrella header "CharacterLocationSeeker-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,68 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%lld 个苹果" : {
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "needs_review",
+                  "value" : "%lld 个苹果"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld 个苹果 apples"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Add Item" : {
+
+    },
+    "Item at %@" : {
+
+    },
+    "Select an item" : {
+
+    },
+    "测试国际化字符串" : {
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "device" : {
+              "ipad" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "测试国际化字符串dfdsfdsf"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "new",
+                  "value" : "测试国际化字符串"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "测试国际化字符串1" : {
+
+    },
+    "测试国际化字符串6" : {
+
+    },
+    "点击的防静电九分裤 %@" : {
+
+    }
+  },
+  "version" : "1.0"
+}

@@ -1,0 +1,20 @@
+PODS:
+  - CharacterLocationSeeker (0.0.3)
+  - MJRefresh (3.7.6)
+
+DEPENDENCIES:
+  - CharacterLocationSeeker
+  - MJRefresh
+
+SPEC REPOS:
+  trunk:
+    - CharacterLocationSeeker
+    - MJRefresh
+
+SPEC CHECKSUMS:
+  CharacterLocationSeeker: fbce5cb6746c2205a003874c5647ee801b088dbf
+  MJRefresh: 2fe7fb43a5167ceda20bb7e63f130c04fd1814a5
+
+PODFILE CHECKSUM: 28cae8d620525533423a515d2f45c1bc6e3b8042
+
+COCOAPODS: 1.11.3

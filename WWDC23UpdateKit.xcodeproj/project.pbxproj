@@ -3,24 +3,36 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B54027248001C328A596EB61 /* Pods_WWDC23UpdateKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FC3D050AA2190175F2B5298 /* Pods_WWDC23UpdateKit.framework */; };
 		C50D6EBD2AC2A0AB006A0505 /* WWDC23UpdateKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50D6EBC2AC2A0AB006A0505 /* WWDC23UpdateKitApp.swift */; };
 		C50D6EBF2AC2A0AB006A0505 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50D6EBE2AC2A0AB006A0505 /* ContentView.swift */; };
 		C50D6EC12AC2A0AB006A0505 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50D6EC02AC2A0AB006A0505 /* Item.swift */; };
 		C50D6EC32AC2A0AD006A0505 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C50D6EC22AC2A0AD006A0505 /* Assets.xcassets */; };
 		C50D6EC62AC2A0AD006A0505 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C50D6EC52AC2A0AD006A0505 /* Preview Assets.xcassets */; };
+		C50D6ECD2AC3FAB2006A0505 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = C50D6ECC2AC3FAB2006A0505 /* Localizable.xcstrings */; };
+		C5BD0B672AF8943D008F8224 /* TestRefreshingHeaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BD0B652AF8943D008F8224 /* TestRefreshingHeaderVC.swift */; };
+		C5BD0B682AF8943D008F8224 /* TestRefreshingHeaderVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5BD0B662AF8943D008F8224 /* TestRefreshingHeaderVC.xib */; };
+		C5D5675B2AC405D6009DCA05 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D5675A2AC405D6009DCA05 /* TestVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4FC3D050AA2190175F2B5298 /* Pods_WWDC23UpdateKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WWDC23UpdateKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		553EF5C6EF51194653F1CDB6 /* Pods-WWDC23UpdateKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WWDC23UpdateKit.release.xcconfig"; path = "Target Support Files/Pods-WWDC23UpdateKit/Pods-WWDC23UpdateKit.release.xcconfig"; sourceTree = "<group>"; };
+		B78A6F0490EDD99F951C597E /* Pods-WWDC23UpdateKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WWDC23UpdateKit.debug.xcconfig"; path = "Target Support Files/Pods-WWDC23UpdateKit/Pods-WWDC23UpdateKit.debug.xcconfig"; sourceTree = "<group>"; };
 		C50D6EB92AC2A0AB006A0505 /* WWDC23UpdateKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WWDC23UpdateKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C50D6EBC2AC2A0AB006A0505 /* WWDC23UpdateKitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDC23UpdateKitApp.swift; sourceTree = "<group>"; };
 		C50D6EBE2AC2A0AB006A0505 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C50D6EC02AC2A0AB006A0505 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		C50D6EC22AC2A0AD006A0505 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C50D6EC52AC2A0AD006A0505 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C50D6ECC2AC3FAB2006A0505 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		C5BD0B652AF8943D008F8224 /* TestRefreshingHeaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRefreshingHeaderVC.swift; sourceTree = "<group>"; };
+		C5BD0B662AF8943D008F8224 /* TestRefreshingHeaderVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestRefreshingHeaderVC.xib; sourceTree = "<group>"; };
+		C5D5675A2AC405D6009DCA05 /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,17 +40,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B54027248001C328A596EB61 /* Pods_WWDC23UpdateKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		402B23276818D7AE87B33CEB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4FC3D050AA2190175F2B5298 /* Pods_WWDC23UpdateKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5A670C63F3B0E9E52A6B2EAE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B78A6F0490EDD99F951C597E /* Pods-WWDC23UpdateKit.debug.xcconfig */,
+				553EF5C6EF51194653F1CDB6 /* Pods-WWDC23UpdateKit.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C50D6EB02AC2A0AB006A0505 = {
 			isa = PBXGroup;
 			children = (
 				C50D6EBB2AC2A0AB006A0505 /* WWDC23UpdateKit */,
 				C50D6EBA2AC2A0AB006A0505 /* Products */,
+				5A670C63F3B0E9E52A6B2EAE /* Pods */,
+				402B23276818D7AE87B33CEB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +90,10 @@
 				C50D6EC02AC2A0AB006A0505 /* Item.swift */,
 				C50D6EC22AC2A0AD006A0505 /* Assets.xcassets */,
 				C50D6EC42AC2A0AD006A0505 /* Preview Content */,
+				C50D6ECC2AC3FAB2006A0505 /* Localizable.xcstrings */,
+				C5D5675A2AC405D6009DCA05 /* TestVC.swift */,
+				C5BD0B652AF8943D008F8224 /* TestRefreshingHeaderVC.swift */,
+				C5BD0B662AF8943D008F8224 /* TestRefreshingHeaderVC.xib */,
 			);
 			path = WWDC23UpdateKit;
 			sourceTree = "<group>";
@@ -77,9 +113,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C50D6EC92AC2A0AD006A0505 /* Build configuration list for PBXNativeTarget "WWDC23UpdateKit" */;
 			buildPhases = (
+				A89A1E6254E3E920DA1DD9B7 /* [CP] Check Pods Manifest.lock */,
 				C50D6EB52AC2A0AB006A0505 /* Sources */,
 				C50D6EB62AC2A0AB006A0505 /* Frameworks */,
 				C50D6EB72AC2A0AB006A0505 /* Resources */,
+				C6B963B319823A5DA9CEBB25 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -106,7 +144,7 @@
 				};
 			};
 			buildConfigurationList = C50D6EB42AC2A0AB006A0505 /* Build configuration list for PBXProject "WWDC23UpdateKit" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -130,16 +168,62 @@
 			files = (
 				C50D6EC62AC2A0AD006A0505 /* Preview Assets.xcassets in Resources */,
 				C50D6EC32AC2A0AD006A0505 /* Assets.xcassets in Resources */,
+				C5BD0B682AF8943D008F8224 /* TestRefreshingHeaderVC.xib in Resources */,
+				C50D6ECD2AC3FAB2006A0505 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A89A1E6254E3E920DA1DD9B7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WWDC23UpdateKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6B963B319823A5DA9CEBB25 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WWDC23UpdateKit/Pods-WWDC23UpdateKit-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WWDC23UpdateKit/Pods-WWDC23UpdateKit-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WWDC23UpdateKit/Pods-WWDC23UpdateKit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C50D6EB52AC2A0AB006A0505 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5BD0B672AF8943D008F8224 /* TestRefreshingHeaderVC.swift in Sources */,
+				C5D5675B2AC405D6009DCA05 /* TestVC.swift in Sources */,
 				C50D6EBF2AC2A0AB006A0505 /* ContentView.swift in Sources */,
 				C50D6EC12AC2A0AB006A0505 /* Item.swift in Sources */,
 				C50D6EBD2AC2A0AB006A0505 /* WWDC23UpdateKitApp.swift in Sources */,
@@ -270,6 +354,7 @@
 		};
 		C50D6ECA2AC2A0AD006A0505 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B78A6F0490EDD99F951C597E /* Pods-WWDC23UpdateKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -278,12 +363,14 @@
 				DEVELOPMENT_ASSET_PATHS = "\"WWDC23UpdateKit/Preview Content\"";
 				DEVELOPMENT_TEAM = 3EW3QF484M;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,6 +386,7 @@
 		};
 		C50D6ECB2AC2A0AD006A0505 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 553EF5C6EF51194653F1CDB6 /* Pods-WWDC23UpdateKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -307,12 +395,14 @@
 				DEVELOPMENT_ASSET_PATHS = "\"WWDC23UpdateKit/Preview Content\"";
 				DEVELOPMENT_TEAM = 3EW3QF484M;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
