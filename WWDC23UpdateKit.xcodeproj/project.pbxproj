@@ -16,6 +16,7 @@
 		C50D6ECD2AC3FAB2006A0505 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = C50D6ECC2AC3FAB2006A0505 /* Localizable.xcstrings */; };
 		C5BD0B672AF8943D008F8224 /* TestRefreshingHeaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BD0B652AF8943D008F8224 /* TestRefreshingHeaderVC.swift */; };
 		C5BD0B682AF8943D008F8224 /* TestRefreshingHeaderVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5BD0B662AF8943D008F8224 /* TestRefreshingHeaderVC.xib */; };
+		C5BD0B6A2AFA0BCD008F8224 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BD0B692AFA0BCD008F8224 /* Extension.swift */; };
 		C5D5675B2AC405D6009DCA05 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D5675A2AC405D6009DCA05 /* TestVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		C50D6ECC2AC3FAB2006A0505 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		C5BD0B652AF8943D008F8224 /* TestRefreshingHeaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRefreshingHeaderVC.swift; sourceTree = "<group>"; };
 		C5BD0B662AF8943D008F8224 /* TestRefreshingHeaderVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestRefreshingHeaderVC.xib; sourceTree = "<group>"; };
+		C5BD0B692AFA0BCD008F8224 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		C5D5675A2AC405D6009DCA05 /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,6 +96,7 @@
 				C5D5675A2AC405D6009DCA05 /* TestVC.swift */,
 				C5BD0B652AF8943D008F8224 /* TestRefreshingHeaderVC.swift */,
 				C5BD0B662AF8943D008F8224 /* TestRefreshingHeaderVC.xib */,
+				C5BD0B692AFA0BCD008F8224 /* Extension.swift */,
 			);
 			path = WWDC23UpdateKit;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				C5BD0B672AF8943D008F8224 /* TestRefreshingHeaderVC.swift in Sources */,
 				C5D5675B2AC405D6009DCA05 /* TestVC.swift in Sources */,
 				C50D6EBF2AC2A0AB006A0505 /* ContentView.swift in Sources */,
+				C5BD0B6A2AFA0BCD008F8224 /* Extension.swift in Sources */,
 				C50D6EC12AC2A0AB006A0505 /* Item.swift in Sources */,
 				C50D6EBD2AC2A0AB006A0505 /* WWDC23UpdateKitApp.swift in Sources */,
 			);
@@ -370,7 +374,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -402,7 +406,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

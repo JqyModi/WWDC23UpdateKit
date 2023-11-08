@@ -24,16 +24,35 @@
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                     <subviews>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CCD-ED-YxE">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            <rect key="frame" x="0.0" y="111" width="393" height="741"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </tableView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uKM-cG-SaG">
+                            <rect key="frame" x="0.0" y="67" width="393" height="44"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mDL-We-sjU">
+                                    <rect key="frame" x="175" y="12" width="33" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="5FX-se-EN6"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="CCD-ED-YxE" secondAttribute="trailing" id="4eG-9Z-PN5"/>
+                        <constraint firstItem="uKM-cG-SaG" firstAttribute="leading" secondItem="IC9-lD-fvi" secondAttribute="leading" id="5YJ-Pl-03M"/>
+                        <constraint firstItem="uKM-cG-SaG" firstAttribute="top" secondItem="IC9-lD-fvi" secondAttribute="topMargin" id="FhM-LC-w7C"/>
+                        <constraint firstItem="CCD-ED-YxE" firstAttribute="top" secondItem="uKM-cG-SaG" secondAttribute="bottom" id="SoW-8y-9Ir"/>
                         <constraint firstAttribute="bottom" secondItem="CCD-ED-YxE" secondAttribute="bottom" id="bIQ-Jz-hMH"/>
                         <constraint firstItem="CCD-ED-YxE" firstAttribute="leading" secondItem="IC9-lD-fvi" secondAttribute="leading" id="elw-1N-WmS"/>
-                        <constraint firstItem="CCD-ED-YxE" firstAttribute="top" secondItem="IC9-lD-fvi" secondAttribute="top" id="l94-pe-20J"/>
+                        <constraint firstAttribute="trailing" secondItem="uKM-cG-SaG" secondAttribute="trailing" id="y30-fI-nPv"/>
                     </constraints>
                 </view>
             </subviews>
@@ -45,7 +64,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IC9-lD-fvi" secondAttribute="trailing" id="uHM-0W-jz4"/>
                 <constraint firstItem="IC9-lD-fvi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="vnf-we-1cf"/>
             </constraints>
-            <point key="canvasLocation" x="132" y="-12"/>
+            <point key="canvasLocation" x="101.5267175572519" y="-1.4084507042253522"/>
         </view>
     </objects>
     <resources>
