@@ -100,3 +100,104 @@ import UIKit
 public func HexColor(_ hexString: String) -> UIColor {
     UIColor.init(hexString: hexString)
 }
+
+
+
+//frame
+@objc public extension UIView {
+    
+    //把self放到target的左边某个位置     [self]←[target]
+    @objc func leftTo(_ view: UIView, _ forDistance: CGFloat) { x = view.x - forDistance - width }
+    
+    //把self放到target的右边某个位置     [target]←[self]
+    @objc func rightTo(_ view: UIView, _ forDistance: CGFloat) { x = view.maxX + forDistance }
+    
+    //把self放到target的里面左边某个位置     [←[self] target]
+    @objc func leftInner(_ view: UIView, _ forDistance: CGFloat) { x = forDistance }
+    
+    //把self放到target的里面左边某个位置     [target [self]→]
+    @objc func rightInner(_ view: UIView, _ forDistance: CGFloat) {
+        x = view.width - forDistance - width
+        view.addSubview(self)
+    }
+
+    @objc var radius: CGFloat {
+        get { self.width == self.height ? self.width : 0 }
+        set {
+            self.width = newValue
+            self.height = newValue
+        }
+    }
+
+    @objc var width: CGFloat {
+        get { self.frame.size.width }
+        set {
+            self.frame = CGRect(x: self.frame.origin.x,
+                                y: self.frame.origin.y,
+                                width: newValue,
+                                height: self.frame.size.height)
+        }
+    }
+
+    @objc var height: CGFloat {
+        get { self.frame.size.height }
+        set {
+            self.frame = CGRect(x: self.frame.origin.x,
+                                y: self.frame.origin.y,
+                                width: self.frame.size.width,
+                                height: newValue)
+        }
+    }
+    
+    @objc var size: CGSize {
+        get { self.frame.size }
+        set {
+            self.frame = CGRect(x: self.frame.origin.x,
+                                y: self.frame.origin.y,
+                                width: newValue.width,
+                                height: newValue.height)
+        }
+    }
+    
+    @objc var x: CGFloat {
+        get { self.frame.origin.x }
+        set {
+            self.frame = CGRect(x: newValue,
+                                y: self.frame.origin.y,
+                                width: self.frame.size.width,
+                                height: self.frame.size.height)
+        }
+    }
+
+    @objc var centerX: CGFloat {
+        get { self.center.x }
+        set {
+            self.center = CGPoint(x: newValue, y: self.center.y)
+        }
+    }
+
+    @objc var centerY: CGFloat {
+        get { self.center.y }
+        set {
+            self.center = CGPoint(x: self.center.x, y: newValue)
+        }
+    }
+
+    @objc var y: CGFloat {
+        get { self.frame.origin.y }
+        set {
+            self.frame = CGRect(x: self.frame.origin.x,
+                                y: newValue,
+                                width: self.frame.size.width,
+                                height: self.frame.size.height)
+        }
+    }
+
+    @objc var maxX: CGFloat {
+        get { self.frame.origin.x+self.width }
+    }
+
+    @objc var maxY: CGFloat {
+        get { self.frame.origin.y+self.height }
+    }
+}

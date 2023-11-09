@@ -7,5 +7,6 @@ target 'WWDC23UpdateKit' do
   # UIlabel计算特定字符frame
   pod 'CharacterLocationSeeker'
   pod 'MJRefresh'
+  pod 'YYText'
   
 end

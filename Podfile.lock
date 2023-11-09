@@ -1,20 +1,24 @@
 PODS:
   - CharacterLocationSeeker (0.0.3)
   - MJRefresh (3.7.6)
+  - YYText (1.0.7)
 
 DEPENDENCIES:
   - CharacterLocationSeeker
   - MJRefresh
+  - YYText
 
 SPEC REPOS:
   trunk:
     - CharacterLocationSeeker
     - MJRefresh
+    - YYText
 
 SPEC CHECKSUMS:
   CharacterLocationSeeker: fbce5cb6746c2205a003874c5647ee801b088dbf
   MJRefresh: 2fe7fb43a5167ceda20bb7e63f130c04fd1814a5
+  YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 28cae8d620525533423a515d2f45c1bc6e3b8042
+PODFILE CHECKSUM: 8ac6fcb469b66a36a0135282824580aa3138ab65
 
 COCOAPODS: 1.11.3

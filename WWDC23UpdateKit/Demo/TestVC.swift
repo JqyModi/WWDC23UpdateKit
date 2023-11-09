@@ -7,6 +7,7 @@
 
 import UIKit
 import CharacterLocationSeeker
+import YYText
 
 let seeker = CharacterLocationSeeker()
 
@@ -106,28 +107,73 @@ class TestVC: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-//        addSubview(imagev)
-//        imagev.frame = CGRect(x: 20, y: 20, width: 80, height: 40)
+        testYYLabelLast()
+    }
+    
+    func testYYLabelLast() {
+        let label = YYLabel(frame: CGRect(x: 80, y: 300, width: 211, height: 48))
+        label.numberOfLines = 2
+        let attr = NSMutableAttributedString(string: "This is a long label with multiple lines. The last character is 's'.活得好好的会的话换肤大")
+        label.attributedText = attr
+        addImageAttr(label: label, mulAttr: attr)
+//        TestYYLabelLastView.addSeeMoreButton(yyLabel: label)
+        addSubview(label)
+    }
+    
+    func addImageAttr(label: YYLabel, mulAttr: NSMutableAttributedString) {
+        // 获取文本的字体
+        let font = label.font!
         
-        addSubview(UISwitch())
+        let editAttachment = NSTextAttachment()
+        editAttachment.image = UIImage(named: "ic_wordlist_edit")
+        editAttachment.bounds = CGRect(x: 8, y: font.descender, width: font.lineHeight * editAttachment.image!.size.width / editAttachment.image!.size.height, height: font.lineHeight)
+        mulAttr.append(NSAttributedString(attachment: editAttachment))
         
-        
+        label.attributedText = mulAttr
+    }
+    
+    func testLabelBounds() {
         // Example usage
-        let label = UILabel(frame: CGRect(x: 80, y: 300, width: 200, height: 200))
-        label.numberOfLines = 0
+        let label = UILabel(frame: CGRect(x: 80, y: 300, width: 211, height: 48))
+        label.numberOfLines = 2
         label.text = "This is a long label with multiple lines. The last character is 's'.活得好好的会的话换肤大"
         label.sizeToFit()
+        print("label.bounds11111 === \(label.bounds)")
         addSubview(label)
-        var lastCharFrame = label.lastCharFrame(label: label) ?? .zero
-//        lastCharFrame.size.width += 50
-        lastCharFrame.origin.x += label.frame.minX
-        lastCharFrame.origin.y += label.frame.minY
-        print("最后一个字符的位置：", lastCharFrame)
-//        let view1 = UIView(frame: lastCharFrame)
-        imagev.frame = lastCharFrame
-//        view1.backgroundColor = .red
-        addSubview(imagev)
-//        self.bringSubviewToFront(view1)
+//        var lastCharFrame = label.lastCharFrame(label: label) ?? .zero
+////        lastCharFrame.size.width += 50
+//        lastCharFrame.origin.x += label.frame.minX
+//        lastCharFrame.origin.y += label.frame.minY
+//        print("最后一个字符的位置：", lastCharFrame)
+////        let view1 = UIView(frame: lastCharFrame)
+//        imagev.frame = lastCharFrame
+////        view1.backgroundColor = .red
+//        addSubview(imagev)
+////        self.bringSubviewToFront(view1)
+            
+        print("height === \(label.mj_h)")
+        print("width === \(label.mj_w)")
+        let size = CGSize(width: label.mj_w, height: CGFloat.greatestFiniteMagnitude)
+//        let frame = label.attributedText?.boundingRect(with: size, options: [.usesLineFragmentOrigin], context: nil)
+        label.numberOfLines = 0
+        label.sizeToFit()
+        print("label.bounds22222 === \(label.bounds)")
+        let frame = label.textRect(forBounds: CGRect(origin: label.bounds.origin, size: CGSize(width: .greatestFiniteMagnitude, height: label.bounds.height)), limitedToNumberOfLines: 0)
+//        let frame = label.text!.boundingRect(with: size, options: .usesLineFragmentOrigin, context: nil)
+        
+        print("height111111 === \(frame.height)")
+        
+        addPreView(frame: frame, label: label)
+    }
+    
+    func addPreView(frame: CGRect, label: UILabel) {
+        var frame = frame
+        frame.origin.x += label.frame.minX
+        frame.origin.y += label.frame.minY - 50
+
+        let v = UIView(frame: frame)
+        v.backgroundColor = .systemMint
+        addSubview(v)
     }
     
     required init?(coder: NSCoder) {
@@ -139,85 +185,6 @@ class TestVC: UIView {
 #Preview {
     return TestVC(frame: CGRect(x: 0, y: 0, width: 300, height: 100))
  }
-
-
-class PlayingIndicatorView: UIView {
-    
-    private let imageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
-        imageView.layer.cornerRadius = 24
-        return imageView
-    }()
-    
-    private var isPlaying: Bool = false {
-        didSet {
-            if isPlaying {
-                startRotationAnimation()
-            } else {
-                stopRotationAnimation()
-            }
-        }
-    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupUI()
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        setupUI()
-    }
-    
-    private func setupUI() {
-        addSubview(imageView)
-        // 设置 imageView 的约束，这里根据需求自行调整
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: topAnchor),
-            imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            imageView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            imageView.bottomAnchor.constraint(equalTo: bottomAnchor)
-        ])
-    }
-    
-    // 设置播放状态，true 表示播放，false 表示停止
-    func setPlaying(_ playing: Bool) {
-        isPlaying = playing
-    }
-    
-    // 设置播放状态，true 表示播放，false 表示停止
-    func setImage(_ imgURL: URL?, placeholderImage: UIImage?) {
-//        self.imageView.moji_setImage(with: imgURL, placeholderImage: placeholderImage ?? MDUIUtils.defaultFolderCoverFullImage())
-        self.imageView.backgroundColor = .gray
-    }
-    
-    // 启动旋转动画
-    private func startRotationAnimation() {
-        let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
-        rotationAnimation.fromValue = 0
-        rotationAnimation.toValue = Double.pi * 2
-        rotationAnimation.duration = 2.0 // 旋转一圈的时间
-        rotationAnimation.repeatCount = .greatestFiniteMagnitude // 无限重复
-        imageView.layer.add(rotationAnimation, forKey: "rotationAnimation")
-    }
-    
-    // 停止旋转动画
-    private func stopRotationAnimation() {
-        imageView.layer.removeAnimation(forKey: "rotationAnimation")
-    }
-}
-
-//#Preview {
-//    let bgView = UIView(frame: CGRect(origin: CGPoint(x: 100, y: 100), size: CGSize(width: 100, height: 100)))
-//    let pv = PlayingIndicatorView(frame: CGRect(origin: CGPoint(x: 100, y: 100), size: CGSize(width: 100, height: 100)))
-//    pv.setPlaying(false)
-//    pv.setImage(nil, placeholderImage: nil)
-//    pv.backgroundColor = .red
-//    bgView.addSubview(pv)
-//    return bgView
-//}
 
 
 
