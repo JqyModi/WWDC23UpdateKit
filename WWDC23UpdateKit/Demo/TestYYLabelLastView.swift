@@ -20,7 +20,11 @@ struct TestYYLabelLastView: View {
 
 extension TestYYLabelLastView {
     static func addSeeMoreButton(yyLabel: YYLabel) {
-        let text = NSMutableAttributedString(string: "...more")
+        let text = NSMutableAttributedString(string: "...")
+        
+        let image = UIImage(named: "ic_wordlist_edit")
+        let imageAttr = NSMutableAttributedString.yy_attachmentString(withContent: image, contentMode: .center, attachmentSize: image!.size, alignTo: yyLabel.font, alignment: .center)
+        text.append(imageAttr)
 
         let highlight = YYTextHighlight()
         highlight.setColor(UIColor(red: 0.578, green: 0.790, blue: 1.000, alpha: 1.000))

@@ -106,28 +106,31 @@ class TestVC: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+        backgroundColor = .link
         testYYLabelLast()
     }
     
     func testYYLabelLast() {
         let label = YYLabel(frame: CGRect(x: 80, y: 300, width: 211, height: 48))
         label.numberOfLines = 2
-        let attr = NSMutableAttributedString(string: "This is a long label with multiple lines. The last character is 's'.活得好好的会的话换肤大")
+        label.font = .systemFont(ofSize: 16)
+        let attr = NSMutableAttributedString(string: "This is a long label with multiple li This is a long label with multiple li This is a long label with multiple li")
         label.attributedText = attr
-        addImageAttr(label: label, mulAttr: attr)
-//        TestYYLabelLastView.addSeeMoreButton(yyLabel: label)
+        addImageAttr(label: label, imageName: "ic_wordlist_edit")
+        TestYYLabelLastView.addSeeMoreButton(yyLabel: label)
         addSubview(label)
     }
     
-    func addImageAttr(label: YYLabel, mulAttr: NSMutableAttributedString) {
+    func addImageAttr(label: YYLabel, imageName: String = "") {
+        let mulAttr: NSMutableAttributedString = label.attributedText as! NSMutableAttributedString
         // 获取文本的字体
         let font = label.font!
-        
-        let editAttachment = NSTextAttachment()
-        editAttachment.image = UIImage(named: "ic_wordlist_edit")
-        editAttachment.bounds = CGRect(x: 8, y: font.descender, width: font.lineHeight * editAttachment.image!.size.width / editAttachment.image!.size.height, height: font.lineHeight)
-        mulAttr.append(NSAttributedString(attachment: editAttachment))
+        if imageName.isEmpty {
+            return
+        }
+        let image = UIImage(named: imageName)
+        let imageAttr = NSMutableAttributedString.yy_attachmentString(withContent: image, contentMode: .center, attachmentSize: image!.size, alignTo: font, alignment: .center)
+        mulAttr.append(imageAttr)
         
         label.attributedText = mulAttr
     }
