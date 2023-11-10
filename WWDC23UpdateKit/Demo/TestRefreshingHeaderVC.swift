@@ -60,7 +60,7 @@ class TestRefreshingHeaderVC: UIViewController {
     }()
     
     func configBigBgColor() {
-        gradientBgView1.backgroundColor = .green
+//        gradientBgView1.backgroundColor = .green
 //        gradientBgView.frame = gradientBgView1.bounds
         gradientBgView1.addSubview(gradientBgView)
         gradientBgView.translatesAutoresizingMaskIntoConstraints = false
@@ -133,7 +133,7 @@ extension TestRefreshingHeaderVC: UITableViewDataSource, UITableViewDelegate {
         // Customize appearance.
         content.imageProperties.tintColor = .purple
         cell.contentConfiguration = content
-        cell.backgroundColor = .clear
+        cell.backgroundColor = .white
 
         return cell
     }
