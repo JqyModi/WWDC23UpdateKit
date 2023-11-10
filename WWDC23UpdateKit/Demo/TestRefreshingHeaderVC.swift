@@ -12,6 +12,8 @@ class TestRefreshingHeaderVC: UIViewController {
 
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var gradientBgView1: UIView!
+    @IBOutlet weak var bgViewH: NSLayoutConstraint!
     
     lazy var tabHeaderView: UIView = {
         let image = UIImageView(image: UIImage(resource: .icWordlistEdit))
@@ -28,7 +30,6 @@ class TestRefreshingHeaderVC: UIViewController {
     
     func configViews() {
         configBigBgColor()
-        configWhiteBg()
         
         tableView.backgroundColor = .clear
         
@@ -48,8 +49,6 @@ class TestRefreshingHeaderVC: UIViewController {
         })
         mjHeader.backgroundColor = .clear
         tableView.mj_header = mjHeader
-        
-        configTableMaskView()
     }
     
     lazy var gradientBgView: MOJiFavInfoGradientView = {
@@ -61,8 +60,15 @@ class TestRefreshingHeaderVC: UIViewController {
     }()
     
     func configBigBgColor() {
-        gradientBgView.frame = bgView.bounds
-        bgView.insertSubview(gradientBgView, at: 0)
+        gradientBgView1.backgroundColor = .green
+//        gradientBgView.frame = gradientBgView1.bounds
+        gradientBgView1.addSubview(gradientBgView)
+        gradientBgView.translatesAutoresizingMaskIntoConstraints = false
+        
+        gradientBgView.leadingAnchor.constraint(equalTo: gradientBgView1.leadingAnchor).isActive = true
+        gradientBgView.trailingAnchor.constraint(equalTo: gradientBgView1.trailingAnchor).isActive = true
+        gradientBgView.topAnchor.constraint(equalTo: gradientBgView1.topAnchor).isActive = true
+        gradientBgView.bottomAnchor.constraint(equalTo: gradientBgView1.bottomAnchor).isActive = true
     }
     
 //    lazy var whiteBgView: MOJiFavInfoGradientView = {
@@ -120,18 +126,13 @@ extension TestRefreshingHeaderVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TestCell", for: indexPath)
-        
         var content = cell.defaultContentConfiguration()
-        
         // Configure content.
         content.image = UIImage(systemName: "star")
         content.text = "Favorites 第\(indexPath.row)项"
-
         // Customize appearance.
         content.imageProperties.tintColor = .purple
-
         cell.contentConfiguration = content
-        
         cell.backgroundColor = .clear
 
         return cell
@@ -149,18 +150,14 @@ extension TestRefreshingHeaderVC: UITableViewDataSource, UITableViewDelegate {
     func handleRefreshingBgView(scrollView: UIScrollView) {
         // 获取当前滚动的偏移量
         let yOffset = scrollView.contentOffset.y
-        
-        if yOffset < 0 {
-            let th = tableView.tableHeaderView?.mj_h ?? 0
-            let ttop = tableView.mj_y
-            let rate = (th + ttop - yOffset) / view.mj_h
-            tabMaskLayer.locations = [0, NSNumber(value: rate), 0.01]
-        } else {
-            let th = tableView.tableHeaderView?.mj_h ?? 0
-            let ttop = tableView.mj_y
-            let rate = (th + ttop) / view.mj_h
-            tabMaskLayer.locations = [0, NSNumber(value: rate), 0.01]
+        var height = 375 - yOffset
+        if height <= tableView.mj_y {
+            height = tableView.mj_y
         }
+        
+        print("height    -----------     \(height)")
+        gradientBgView1.height = height
+        bgViewH.constant = height
     }
 }
 
