@@ -17,9 +17,13 @@
 		C5238FA72AFCD52E00AEBBB7 /* TestLabelLastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5238FA62AFCD52E00AEBBB7 /* TestLabelLastView.swift */; };
 		C5238FA92AFCD6AE00AEBBB7 /* PlayingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5238FA82AFCD6AE00AEBBB7 /* PlayingIndicatorView.swift */; };
 		C5238FAE2AFCE64700AEBBB7 /* TestYYLabelLastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5238FAD2AFCE64700AEBBB7 /* TestYYLabelLastView.swift */; };
-		C5BD0B672AF8943D008F8224 /* TestRefreshingHeaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BD0B652AF8943D008F8224 /* TestRefreshingHeaderVC.swift */; };
+		C58FC7392AFF99B8004F2648 /* TestRefreshingHeaderVC01.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58FC7382AFF99B8004F2648 /* TestRefreshingHeaderVC01.swift */; };
 		C5BD0B682AF8943D008F8224 /* TestRefreshingHeaderVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5BD0B662AF8943D008F8224 /* TestRefreshingHeaderVC.xib */; };
 		C5BD0B6A2AFA0BCD008F8224 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BD0B692AFA0BCD008F8224 /* Extension.swift */; };
+		C5CBBB852AFF9F9C001A0048 /* TestRefreshingHeaderVC01.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5CBBB832AFF9F9C001A0048 /* TestRefreshingHeaderVC01.xib */; };
+		C5CBBB862AFF9F9C001A0048 /* TestRefreshingHeaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CBBB842AFF9F9C001A0048 /* TestRefreshingHeaderVC.swift */; };
+		C5CBBB8C2B0047BE001A0048 /* TestRefreshingHeaderVC02.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5CBBB8A2B0047BD001A0048 /* TestRefreshingHeaderVC02.xib */; };
+		C5CBBB8D2B0047BE001A0048 /* TestRefreshingHeaderVC02.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CBBB8B2B0047BE001A0048 /* TestRefreshingHeaderVC02.swift */; };
 		C5D5675B2AC405D6009DCA05 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D5675A2AC405D6009DCA05 /* TestVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,9 +41,13 @@
 		C5238FA62AFCD52E00AEBBB7 /* TestLabelLastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLabelLastView.swift; sourceTree = "<group>"; };
 		C5238FA82AFCD6AE00AEBBB7 /* PlayingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingIndicatorView.swift; sourceTree = "<group>"; };
 		C5238FAD2AFCE64700AEBBB7 /* TestYYLabelLastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestYYLabelLastView.swift; sourceTree = "<group>"; };
-		C5BD0B652AF8943D008F8224 /* TestRefreshingHeaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRefreshingHeaderVC.swift; sourceTree = "<group>"; };
+		C58FC7382AFF99B8004F2648 /* TestRefreshingHeaderVC01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRefreshingHeaderVC01.swift; sourceTree = "<group>"; };
 		C5BD0B662AF8943D008F8224 /* TestRefreshingHeaderVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestRefreshingHeaderVC.xib; sourceTree = "<group>"; };
 		C5BD0B692AFA0BCD008F8224 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		C5CBBB832AFF9F9C001A0048 /* TestRefreshingHeaderVC01.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestRefreshingHeaderVC01.xib; sourceTree = "<group>"; };
+		C5CBBB842AFF9F9C001A0048 /* TestRefreshingHeaderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestRefreshingHeaderVC.swift; sourceTree = "<group>"; };
+		C5CBBB8A2B0047BD001A0048 /* TestRefreshingHeaderVC02.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestRefreshingHeaderVC02.xib; sourceTree = "<group>"; };
+		C5CBBB8B2B0047BE001A0048 /* TestRefreshingHeaderVC02.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestRefreshingHeaderVC02.swift; sourceTree = "<group>"; };
 		C5D5675A2AC405D6009DCA05 /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,13 +139,17 @@
 		C5238FAC2AFCD70700AEBBB7 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				C5CBBB8B2B0047BE001A0048 /* TestRefreshingHeaderVC02.swift */,
+				C5CBBB8A2B0047BD001A0048 /* TestRefreshingHeaderVC02.xib */,
 				C5238FA82AFCD6AE00AEBBB7 /* PlayingIndicatorView.swift */,
 				C5238FA62AFCD52E00AEBBB7 /* TestLabelLastView.swift */,
-				C5BD0B652AF8943D008F8224 /* TestRefreshingHeaderVC.swift */,
-				C5D5675A2AC405D6009DCA05 /* TestVC.swift */,
-				C50D6EBC2AC2A0AB006A0505 /* WWDC23UpdateKitApp.swift */,
+				C5CBBB842AFF9F9C001A0048 /* TestRefreshingHeaderVC.swift */,
 				C5BD0B662AF8943D008F8224 /* TestRefreshingHeaderVC.xib */,
+				C58FC7382AFF99B8004F2648 /* TestRefreshingHeaderVC01.swift */,
+				C5CBBB832AFF9F9C001A0048 /* TestRefreshingHeaderVC01.xib */,
+				C5D5675A2AC405D6009DCA05 /* TestVC.swift */,
 				C5238FAD2AFCE64700AEBBB7 /* TestYYLabelLastView.swift */,
+				C50D6EBC2AC2A0AB006A0505 /* WWDC23UpdateKitApp.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -205,6 +217,8 @@
 				C50D6EC62AC2A0AD006A0505 /* Preview Assets.xcassets in Resources */,
 				C50D6EC32AC2A0AD006A0505 /* Assets.xcassets in Resources */,
 				C5BD0B682AF8943D008F8224 /* TestRefreshingHeaderVC.xib in Resources */,
+				C5CBBB8C2B0047BE001A0048 /* TestRefreshingHeaderVC02.xib in Resources */,
+				C5CBBB852AFF9F9C001A0048 /* TestRefreshingHeaderVC01.xib in Resources */,
 				C50D6ECD2AC3FAB2006A0505 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,10 +272,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5BD0B672AF8943D008F8224 /* TestRefreshingHeaderVC.swift in Sources */,
+				C5CBBB8D2B0047BE001A0048 /* TestRefreshingHeaderVC02.swift in Sources */,
+				C5CBBB862AFF9F9C001A0048 /* TestRefreshingHeaderVC.swift in Sources */,
 				C5238FA92AFCD6AE00AEBBB7 /* PlayingIndicatorView.swift in Sources */,
 				C5D5675B2AC405D6009DCA05 /* TestVC.swift in Sources */,
 				C50D6EBF2AC2A0AB006A0505 /* ContentView.swift in Sources */,
+				C58FC7392AFF99B8004F2648 /* TestRefreshingHeaderVC01.swift in Sources */,
 				C5BD0B6A2AFA0BCD008F8224 /* Extension.swift in Sources */,
 				C5238FA72AFCD52E00AEBBB7 /* TestLabelLastView.swift in Sources */,
 				C50D6EC12AC2A0AB006A0505 /* Item.swift in Sources */,
@@ -410,7 +426,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -442,7 +458,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

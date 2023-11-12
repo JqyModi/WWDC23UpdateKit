@@ -1,5 +1,5 @@
 //
-//  TestRefreshingHeaderVC.swift
+//  TestRefreshingHeaderVC02.swift
 //  WWDC23UpdateKit
 //
 //  Created by J.qy on 2023/11/6.
@@ -8,38 +8,17 @@
 import UIKit
 import MJRefresh
 
-class TestRefreshingHeaderVC: UIViewController {
+class TestRefreshingHeaderVC02: UIViewController {
 
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var gradientBgView1: UIView!
     @IBOutlet weak var bgViewH: NSLayoutConstraint!
     
-    @IBAction func tapEmpty(_ sender: UIButton) {
-        sender.isSelected = !sender.isSelected
-        if sender.isSelected {
-            models = []
-            tableView.reloadData()
-        } else {
-            let tt = [[1,2,3,4,4,5,6,7,34,56], [1,2,3,4,4,5,6,7,8,9,10,56], [1,2,8,9,10,11,23,34,56], [1,2,3,4,4,5,6]]
-            models = tt.randomElement() ?? [1,2]
-            tableView.reloadData()
-        }
-    }
-    
-    var models: [Int] = [1,2,3,4,4]
-    
     lazy var tabHeaderView: UIView = {
         let image = UIImageView(image: UIImage(resource: .icWordlistEdit))
         image.frame = CGRect(x: 0, y: 0, width: 375, height: 100)
         image.backgroundColor = .clear
-        return image
-    }()
-    
-    lazy var tabFooterView: UIView = {
-        let image = UIView()
-        image.frame = CGRect(x: 0, y: 0, width: 375, height: tableView.height-tabHeaderView.height)
-        image.backgroundColor = .white
         return image
     }()
     
@@ -52,14 +31,11 @@ class TestRefreshingHeaderVC: UIViewController {
     func configViews() {
         configBigBgColor()
         
-        tableView.backgroundColor = .clear
+        tableView.backgroundColor = .white
         
         tableView.tableHeaderView = tabHeaderView
-        tableView.tableHeaderView?.height = 100
         
-        bgViewH.constant = tableView.mj_y + tabHeaderView.height
-        
-        tableView.tableFooterView = tabFooterView
+        tableView.tableFooterView = UIView()
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = 80
@@ -73,6 +49,8 @@ class TestRefreshingHeaderVC: UIViewController {
         })
         mjHeader.backgroundColor = .clear
         tableView.mj_header = mjHeader
+        
+        configWhiteBg()
     }
     
     lazy var gradientBgView: MOJiFavInfoGradientView = {
@@ -85,33 +63,34 @@ class TestRefreshingHeaderVC: UIViewController {
     
     func configBigBgColor() {
         gradientBgView1.backgroundColor = .clear
-//        gradientBgView.frame = gradientBgView1.bounds
-        gradientBgView1.addSubview(gradientBgView)
-        gradientBgView.translatesAutoresizingMaskIntoConstraints = false
         
-        gradientBgView.leadingAnchor.constraint(equalTo: gradientBgView1.leadingAnchor).isActive = true
-        gradientBgView.trailingAnchor.constraint(equalTo: gradientBgView1.trailingAnchor).isActive = true
-        gradientBgView.topAnchor.constraint(equalTo: gradientBgView1.topAnchor).isActive = true
-        gradientBgView.bottomAnchor.constraint(equalTo: gradientBgView1.bottomAnchor).isActive = true
+        gradientBgView.frame = bgView.bounds
+        bgView.insertSubview(gradientBgView, at: 0)
     }
     
-//    lazy var whiteBgView: MOJiFavInfoGradientView = {
-//        let view = MOJiFavInfoGradientView()
-//        let from = UIColor(hex: 0xFFBCBC).cgColor
-//        let to = UIColor(hex: 0x8B8787).cgColor
-//        view.gradientLayer.colors = [from, to]
-//        return view
-//    }()
-    
-    lazy var whiteBgView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .white
+    lazy var whiteBgView: MOJiFavInfoGradientView = {
+        let view = MOJiFavInfoGradientView()
+        let from = UIColor(hex: 0xFFBCBC).cgColor
+        let to = UIColor(hex: 0x8B8787).cgColor
+        view.gradientLayer.colors = [from, to]
         return view
     }()
     
+//    lazy var whiteBgView: UIView = {
+//        let view = UIView()
+//        view.backgroundColor = .white
+//        return view
+//    }()
+    
+    lazy var whiteBgContainerView: UIView = {
+        let v = UIView()
+        v.backgroundColor = .green
+        return v
+    }()
+    
     func configWhiteBg() {
-        whiteBgView.frame = CGRect(x: 0, y: 0, width: view.mj_w, height: view.mj_h)
-        bgView.insertSubview(whiteBgView, aboveSubview: gradientBgView)
+        whiteBgView.frame = CGRect(x: 0, y: 0, width: view.mj_w, height: tabHeaderView.height)
+        tableView.insertSubview(whiteBgView, at: 0)
     }
 
     lazy var tabMaskView: UIView = {
@@ -143,9 +122,9 @@ class TestRefreshingHeaderVC: UIViewController {
     
 }
 
-extension TestRefreshingHeaderVC: UITableViewDataSource, UITableViewDelegate {
+extension TestRefreshingHeaderVC02: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return [models.count, 0].randomElement() ?? 0
+        return [5].randomElement()!
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -157,7 +136,7 @@ extension TestRefreshingHeaderVC: UITableViewDataSource, UITableViewDelegate {
         // Customize appearance.
         content.imageProperties.tintColor = .purple
         cell.contentConfiguration = content
-        cell.backgroundColor = .white
+        cell.backgroundColor = .clear
 
         return cell
     }
@@ -167,24 +146,6 @@ extension TestRefreshingHeaderVC: UITableViewDataSource, UITableViewDelegate {
         tabMaskLayer.locations = [0, NSNumber(value: tt), 0.01]
     }
     
-//    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-//        if models.isEmpty {
-//            return tableView.height - tabHeaderView.height
-//        }
-//        
-//        return 0
-//    }
-//    
-//    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-//        if models.isEmpty {
-//            let v = UIView()
-//            v.backgroundColor = .white
-//            return v
-//        }
-//        
-//        return nil
-//    }
-    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         handleRefreshingBgView(scrollView: scrollView)
     }
@@ -192,33 +153,38 @@ extension TestRefreshingHeaderVC: UITableViewDataSource, UITableViewDelegate {
     func handleRefreshingBgView(scrollView: UIScrollView) {
         // 获取当前滚动的偏移量
         let yOffset = scrollView.contentOffset.y
-        var height = (tableView.mj_y + tabHeaderView.height + 100) - yOffset
-        if height <= tableView.mj_y {
-            height = tableView.mj_y
-        }
+//        var height = 375 - yOffset
+//        if height <= tableView.mj_y {
+//            height = tableView.mj_y
+//        }
+//        
+//        print("height    -----------     \(height)")
+//        gradientBgView1.height = height
+//        bgViewH.constant = height
         
-        print("height    -----------     \(height)")
-        gradientBgView1.height = height
-        bgViewH.constant = height
+        let offset: CGFloat = 0
+        if yOffset < 0 {
+            whiteBgView.frame = CGRect(x: 0, y: yOffset, width: scrollView.width, height: -yOffset + tabHeaderView.height + offset)
+        } else {
+            whiteBgView.frame = CGRect(x: 0, y: 0, width: scrollView.width, height: tabHeaderView.height + offset)
+        }
     }
 }
 
 import SwiftUI
 
-struct TestRefreshingHeaderVCView: UIViewRepresentable {
+struct TestRefreshingHeaderVC02View: UIViewRepresentable {
     func updateUIView(_ uiView: UIView, context: Context) {
 //        uiView.backgroundColor = .red
     }
     
     func makeUIView(context: Context) -> UIView {
-        let vc = TestRefreshingHeaderVC()
+        let vc = TestRefreshingHeaderVC02()
         return vc.view
     }
     
 }
 
 #Preview {
-    return TestRefreshingHeaderVC()
+    return TestRefreshingHeaderVC02()
 }
-
-

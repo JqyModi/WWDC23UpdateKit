@@ -2,6 +2,7 @@
   "sourceLanguage" : "en",
   "strings" : {
     "%lld 个苹果" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "variations" : {
@@ -23,19 +24,11 @@
         }
       }
     },
-    "Add Item" : {
-
-    },
     "Hello, World!" : {
 
     },
-    "Item at %@" : {
-
-    },
-    "Select an item" : {
-
-    },
     "测试国际化字符串" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "variations" : {
@@ -57,13 +50,7 @@
         }
       }
     },
-    "测试国际化字符串1" : {
-
-    },
     "测试国际化字符串6" : {
-
-    },
-    "点击的防静电九分裤 %@" : {
 
     }
   },
