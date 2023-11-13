@@ -26,7 +26,8 @@ struct WWDC23UpdateKitApp: App {
     var body: some Scene {
         WindowGroup {
 //            ContentView()
-            TestRefreshingHeaderVCView()
+//            TestRefreshingHeaderVCView()
+            TestTableBgPreview()
         }
 //        .modelContainer(sharedModelContainer)
     }

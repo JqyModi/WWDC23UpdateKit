@@ -24,6 +24,7 @@
 		C5CBBB862AFF9F9C001A0048 /* TestRefreshingHeaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CBBB842AFF9F9C001A0048 /* TestRefreshingHeaderVC.swift */; };
 		C5CBBB8C2B0047BE001A0048 /* TestRefreshingHeaderVC02.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5CBBB8A2B0047BD001A0048 /* TestRefreshingHeaderVC02.xib */; };
 		C5CBBB8D2B0047BE001A0048 /* TestRefreshingHeaderVC02.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CBBB8B2B0047BE001A0048 /* TestRefreshingHeaderVC02.swift */; };
+		C5CBBB8F2B02752C001A0048 /* TestTableBgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CBBB8E2B02752B001A0048 /* TestTableBgView.swift */; };
 		C5D5675B2AC405D6009DCA05 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D5675A2AC405D6009DCA05 /* TestVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		C5CBBB842AFF9F9C001A0048 /* TestRefreshingHeaderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestRefreshingHeaderVC.swift; sourceTree = "<group>"; };
 		C5CBBB8A2B0047BD001A0048 /* TestRefreshingHeaderVC02.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestRefreshingHeaderVC02.xib; sourceTree = "<group>"; };
 		C5CBBB8B2B0047BE001A0048 /* TestRefreshingHeaderVC02.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestRefreshingHeaderVC02.swift; sourceTree = "<group>"; };
+		C5CBBB8E2B02752B001A0048 /* TestTableBgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableBgView.swift; sourceTree = "<group>"; };
 		C5D5675A2AC405D6009DCA05 /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,6 +152,7 @@
 				C5D5675A2AC405D6009DCA05 /* TestVC.swift */,
 				C5238FAD2AFCE64700AEBBB7 /* TestYYLabelLastView.swift */,
 				C50D6EBC2AC2A0AB006A0505 /* WWDC23UpdateKitApp.swift */,
+				C5CBBB8E2B02752B001A0048 /* TestTableBgView.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				C58FC7392AFF99B8004F2648 /* TestRefreshingHeaderVC01.swift in Sources */,
 				C5BD0B6A2AFA0BCD008F8224 /* Extension.swift in Sources */,
 				C5238FA72AFCD52E00AEBBB7 /* TestLabelLastView.swift in Sources */,
+				C5CBBB8F2B02752C001A0048 /* TestTableBgView.swift in Sources */,
 				C50D6EC12AC2A0AB006A0505 /* Item.swift in Sources */,
 				C50D6EBD2AC2A0AB006A0505 /* WWDC23UpdateKitApp.swift in Sources */,
 				C5238FAE2AFCE64700AEBBB7 /* TestYYLabelLastView.swift in Sources */,

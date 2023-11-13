@@ -89,8 +89,10 @@ class TestRefreshingHeaderVC01: UIViewController {
     }()
     
     func configWhiteBg() {
-        whiteBgView.frame = CGRect(x: 0, y: 0, width: view.mj_w, height: tabHeaderView.height)
-        tableView.insertSubview(whiteBgView, at: 0)
+        whiteBgView.frame = CGRect(x: 0, y: -tableView.mj_y, width: view.mj_w, height: view.height)
+        whiteBgContainerView.addSubview(whiteBgView)
+        whiteBgContainerView.frame = tabHeaderView.frame
+        tableView.insertSubview(whiteBgContainerView, at: 0)
     }
 
     lazy var tabMaskView: UIView = {
@@ -151,6 +153,7 @@ extension TestRefreshingHeaderVC01: UITableViewDataSource, UITableViewDelegate {
     }
     
     func handleRefreshingBgView(scrollView: UIScrollView) {
+        tableView.sendSubviewToBack(whiteBgContainerView)
         // 获取当前滚动的偏移量
         let yOffset = scrollView.contentOffset.y
 //        var height = 375 - yOffset
@@ -164,9 +167,9 @@ extension TestRefreshingHeaderVC01: UITableViewDataSource, UITableViewDelegate {
         
         let offset: CGFloat = 0
         if yOffset < 0 {
-            whiteBgView.frame = CGRect(x: 0, y: yOffset, width: scrollView.width, height: -yOffset + tabHeaderView.height + offset)
+            whiteBgContainerView.frame = CGRect(x: 0, y: yOffset, width: scrollView.width, height: -yOffset + tabHeaderView.height + offset)
         } else {
-            whiteBgView.frame = CGRect(x: 0, y: 0, width: scrollView.width, height: tabHeaderView.height + offset)
+            whiteBgContainerView.frame = CGRect(x: 0, y: 0, width: scrollView.width, height: tabHeaderView.height + offset)
         }
     }
 }
@@ -186,5 +189,5 @@ struct TestRefreshingHeaderVC01View: UIViewRepresentable {
 }
 
 #Preview {
-    return TestRefreshingHeaderVC01()
+    return TestRefreshingHeaderVC01View()
 }

@@ -186,5 +186,5 @@ struct TestRefreshingHeaderVC02View: UIViewRepresentable {
 }
 
 #Preview {
-    return TestRefreshingHeaderVC02()
+    return TestRefreshingHeaderVC02View()
 }
