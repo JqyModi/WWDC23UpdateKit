@@ -85,6 +85,7 @@ class TestRefreshingHeaderVC: UIViewController {
     
     func configBigBgColor() {
         gradientBgView1.backgroundColor = .clear
+//        gradientBgView1.backgroundColor = .green
 //        gradientBgView.frame = gradientBgView1.bounds
         gradientBgView1.addSubview(gradientBgView)
         gradientBgView.translatesAutoresizingMaskIntoConstraints = false
@@ -200,6 +201,7 @@ extension TestRefreshingHeaderVC: UITableViewDataSource, UITableViewDelegate {
         print("height    -----------     \(height)")
         gradientBgView1.height = height
         bgViewH.constant = height
+        self.view.layoutIfNeeded()
     }
 }
 
