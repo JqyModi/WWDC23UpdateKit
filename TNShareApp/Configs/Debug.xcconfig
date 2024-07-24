@@ -1,0 +1,13 @@
+//
+//  Debug.xcconfig
+//  TNShareApp
+//
+//  Created by J.qy on 2024/2/26.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "Common.xcconfig"
+
+TARGET_NAME = NewTec

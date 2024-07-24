@@ -1,0 +1,8 @@
+
+module CLibrary {
+  header "CLibrary.h"
+}
+
+module RawLayoutCXX {
+  header "raw_layout_cxx.h"
+}

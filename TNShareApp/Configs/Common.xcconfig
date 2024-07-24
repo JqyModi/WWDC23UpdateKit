@@ -1,0 +1,16 @@
+//
+//  Common.xcconfig
+//  TNShareApp
+//
+//  Created by J.qy on 2024/2/26.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+// 参考：https://betterprogramming.pub/working-with-custom-xcconfigs-and-coccoapods-6b87ead94708
+
+#include "Pods/Target Support Files/Pods-TNShareApp/Pods-TNShareApp.debug.xcconfig"
+
+//:completeSettings = some
+PRODUCT_NAME = "iOS新技术探索"
