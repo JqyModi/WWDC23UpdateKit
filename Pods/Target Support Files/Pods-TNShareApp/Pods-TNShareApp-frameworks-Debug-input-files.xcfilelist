@@ -1,0 +1,10 @@
+${PODS_ROOT}/Target Support Files/Pods-TNShareApp/Pods-TNShareApp-frameworks.sh
+${BUILT_PRODUCTS_DIR}/CharacterLocationSeeker/CharacterLocationSeeker.framework
+${BUILT_PRODUCTS_DIR}/DebugKit/DebugKit.framework
+${BUILT_PRODUCTS_DIR}/DoraemonKit/DoraemonKit.framework
+${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework
+${BUILT_PRODUCTS_DIR}/GCDWebServer/GCDWebServer.framework
+${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework
+${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
+${BUILT_PRODUCTS_DIR}/YYText/YYText.framework
+${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework

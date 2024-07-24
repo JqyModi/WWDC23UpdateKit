@@ -41,7 +41,10 @@ struct SimpleEntry: TimelineEntry {
 
 struct DemoWidgetEntryView : View {
     var entry: Provider.Entry
-
+    
+    @State
+    var entitlementManager = EntitlementManager()
+    
     var body: some View {
         VStack {
             Text("Time:")
@@ -49,6 +52,14 @@ struct DemoWidgetEntryView : View {
 
             Text("Emoji:")
             Text(entry.emoji)
+            
+            if entitlementManager.hasPro {
+                // Do something
+                Text("hasPro")
+            } else {
+                // Don't do something
+                Text("Non hasPro")
+            }
         }
     }
 }
@@ -69,6 +80,7 @@ struct DemoWidget: Widget {
         }
         .configurationDisplayName("My Widget")
         .description("This is an example widget.")
+//        .supportedFamilies([.systemSmall])
     }
 }
 

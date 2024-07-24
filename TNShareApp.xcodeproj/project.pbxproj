@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B54027248001C328A596EB61 /* Pods_WWDC23UpdateKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FC3D050AA2190175F2B5298 /* Pods_WWDC23UpdateKit.framework */; };
-		C50D6EBD2AC2A0AB006A0505 /* WWDC23UpdateKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50D6EBC2AC2A0AB006A0505 /* WWDC23UpdateKitApp.swift */; };
+		01089B546D39B4FCE5AC2BBC /* Pods_TNShareApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70680C9445BD2DBBAE20CCDC /* Pods_TNShareApp.framework */; };
+		C50D6EBD2AC2A0AB006A0505 /* TNShareApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50D6EBC2AC2A0AB006A0505 /* TNShareApp.swift */; };
 		C50D6EBF2AC2A0AB006A0505 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50D6EBE2AC2A0AB006A0505 /* ContentView.swift */; };
 		C50D6EC12AC2A0AB006A0505 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50D6EC02AC2A0AB006A0505 /* Item.swift */; };
 		C50D6EC32AC2A0AD006A0505 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C50D6EC22AC2A0AD006A0505 /* Assets.xcassets */; };
@@ -21,7 +21,6 @@
 		C5238FA92AFCD6AE00AEBBB7 /* PlayingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5238FA82AFCD6AE00AEBBB7 /* PlayingIndicatorView.swift */; };
 		C5238FAE2AFCE64700AEBBB7 /* TestYYLabelLastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5238FAD2AFCE64700AEBBB7 /* TestYYLabelLastView.swift */; };
 		C54F631D2BEDCA78006A5EDE /* PlayingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F631C2BEDCA78006A5EDE /* PlayingView.swift */; };
-		C54F631F2BEDCC17006A5EDE /* musicAni01.json in Resources */ = {isa = PBXBuildFile; fileRef = C54F631E2BEDCC17006A5EDE /* musicAni01.json */; };
 		C57FDD782B96AC2E00F330F1 /* StoreKit2Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FAF0E72B8D7AF700243FCB /* StoreKit2Tool.swift */; };
 		C57FDD792B96AC2F00F330F1 /* StoreKit2Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FAF0E72B8D7AF700243FCB /* StoreKit2Tool.swift */; };
 		C5854ECC2C17EB1500001B0D /* CowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5854ECB2C17EB1500001B0D /* CowView.swift */; };
@@ -67,11 +66,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4FC3D050AA2190175F2B5298 /* Pods_WWDC23UpdateKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WWDC23UpdateKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		553EF5C6EF51194653F1CDB6 /* Pods-WWDC23UpdateKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WWDC23UpdateKit.release.xcconfig"; path = "Target Support Files/Pods-WWDC23UpdateKit/Pods-WWDC23UpdateKit.release.xcconfig"; sourceTree = "<group>"; };
-		B78A6F0490EDD99F951C597E /* Pods-WWDC23UpdateKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WWDC23UpdateKit.debug.xcconfig"; path = "Target Support Files/Pods-WWDC23UpdateKit/Pods-WWDC23UpdateKit.debug.xcconfig"; sourceTree = "<group>"; };
+		34CF8DA4F3CCD4343C54A474 /* Pods-TNShareApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TNShareApp.release.xcconfig"; path = "Target Support Files/Pods-TNShareApp/Pods-TNShareApp.release.xcconfig"; sourceTree = "<group>"; };
+		70680C9445BD2DBBAE20CCDC /* Pods_TNShareApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TNShareApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C50D6EB92AC2A0AB006A0505 /* NewTec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewTec.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C50D6EBC2AC2A0AB006A0505 /* WWDC23UpdateKitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDC23UpdateKitApp.swift; sourceTree = "<group>"; };
+		C50D6EBC2AC2A0AB006A0505 /* TNShareApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TNShareApp.swift; sourceTree = "<group>"; };
 		C50D6EBE2AC2A0AB006A0505 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C50D6EC02AC2A0AB006A0505 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		C50D6EC22AC2A0AD006A0505 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,13 +82,12 @@
 		C5238FA82AFCD6AE00AEBBB7 /* PlayingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingIndicatorView.swift; sourceTree = "<group>"; };
 		C5238FAD2AFCE64700AEBBB7 /* TestYYLabelLastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestYYLabelLastView.swift; sourceTree = "<group>"; };
 		C54F631C2BEDCA78006A5EDE /* PlayingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingView.swift; sourceTree = "<group>"; };
-		C54F631E2BEDCC17006A5EDE /* musicAni01.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = musicAni01.json; path = WWDC23UpdateKit/Demo/MyPlayground.playground/Resources/musicAni01.json; sourceTree = SOURCE_ROOT; };
 		C574490C2C09C73E001E4FF0 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Array.swift; path = "swift-main/stdlib/public/core/Array.swift"; sourceTree = "<group>"; };
 		C574490E2C09C8DA001E4FF0 /* ArrayBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArrayBuffer.swift; path = "swift-main/stdlib/public/core/ArrayBuffer.swift"; sourceTree = "<group>"; };
 		C5854ECB2C17EB1500001B0D /* CowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CowView.swift; sourceTree = "<group>"; };
 		C5B693D72B0B040E0013DC7F /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		C5BD0B692AFA0BCD008F8224 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
-		C5C6CB2C2B8DC543006CEA45 /* WWDC23UpdateKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WWDC23UpdateKit.entitlements; sourceTree = "<group>"; };
+		C5C6CB2C2B8DC543006CEA45 /* TNShareApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TNShareApp.entitlements; sourceTree = "<group>"; };
 		C5C6CB2D2B8DC5EC006CEA45 /* DemoWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DemoWidgetExtension.entitlements; sourceTree = "<group>"; };
 		C5D5675A2AC405D6009DCA05 /* LastTagLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastTagLabelView.swift; sourceTree = "<group>"; };
 		C5F4DC322B27EC6A000F09E6 /* AICodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AICodeVC.swift; sourceTree = "<group>"; };
@@ -111,6 +108,7 @@
 		C5FAF0F52B8DAE8200243FCB /* DemoWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoWidget.swift; sourceTree = "<group>"; };
 		C5FAF0F72B8DAE8500243FCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5FAF0F92B8DAE8500243FCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9D3BFE31093EA85BB88A583 /* Pods-TNShareApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TNShareApp.debug.xcconfig"; path = "Target Support Files/Pods-TNShareApp/Pods-TNShareApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B54027248001C328A596EB61 /* Pods_WWDC23UpdateKit.framework in Frameworks */,
+				01089B546D39B4FCE5AC2BBC /* Pods_TNShareApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,9 +135,9 @@
 		402B23276818D7AE87B33CEB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4FC3D050AA2190175F2B5298 /* Pods_WWDC23UpdateKit.framework */,
 				C5FAF0EE2B8DAE8200243FCB /* WidgetKit.framework */,
 				C5FAF0F02B8DAE8200243FCB /* SwiftUI.framework */,
+				70680C9445BD2DBBAE20CCDC /* Pods_TNShareApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -147,8 +145,8 @@
 		5A670C63F3B0E9E52A6B2EAE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B78A6F0490EDD99F951C597E /* Pods-WWDC23UpdateKit.debug.xcconfig */,
-				553EF5C6EF51194653F1CDB6 /* Pods-WWDC23UpdateKit.release.xcconfig */,
+				C9D3BFE31093EA85BB88A583 /* Pods-TNShareApp.debug.xcconfig */,
+				34CF8DA4F3CCD4343C54A474 /* Pods-TNShareApp.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -158,7 +156,7 @@
 			children = (
 				C5EF7D6C2C09C0F200D07EF7 /* swift_src */,
 				C5C6CB2D2B8DC5EC006CEA45 /* DemoWidgetExtension.entitlements */,
-				C50D6EBB2AC2A0AB006A0505 /* WWDC23UpdateKit */,
+				C50D6EBB2AC2A0AB006A0505 /* TNShareApp */,
 				C5FAF0F22B8DAE8200243FCB /* DemoWidget */,
 				C50D6EBA2AC2A0AB006A0505 /* Products */,
 				5A670C63F3B0E9E52A6B2EAE /* Pods */,
@@ -175,14 +173,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C50D6EBB2AC2A0AB006A0505 /* WWDC23UpdateKit */ = {
+		C50D6EBB2AC2A0AB006A0505 /* TNShareApp */ = {
 			isa = PBXGroup;
 			children = (
-				C5C6CB2C2B8DC543006CEA45 /* WWDC23UpdateKit.entitlements */,
+				C5C6CB2C2B8DC543006CEA45 /* TNShareApp.entitlements */,
 				C5FAF0DE2B8C93FF00243FCB /* Configs */,
 				C50D6EBE2AC2A0AB006A0505 /* ContentView.swift */,
 				C5FAF0D82B887A1100243FCB /* DebugConfigHelper.swift */,
-				C50D6EBC2AC2A0AB006A0505 /* WWDC23UpdateKitApp.swift */,
+				C50D6EBC2AC2A0AB006A0505 /* TNShareApp.swift */,
 				C50D6EC22AC2A0AD006A0505 /* Assets.xcassets */,
 				C50D6ECC2AC3FAB2006A0505 /* Localizable.xcstrings */,
 				C5238FAC2AFCD70700AEBBB7 /* Demo */,
@@ -190,7 +188,7 @@
 				C5238FAA2AFCD6E800AEBBB7 /* Model */,
 				C50D6EC42AC2A0AD006A0505 /* Preview Content */,
 			);
-			path = WWDC23UpdateKit;
+			path = TNShareApp;
 			sourceTree = "<group>";
 		};
 		C50D6EC42AC2A0AD006A0505 /* Preview Content */ = {
@@ -233,7 +231,6 @@
 		C54F631B2BEDCA5E006A5EDE /* PlayingView */ = {
 			isa = PBXGroup;
 			children = (
-				C54F631E2BEDCC17006A5EDE /* musicAni01.json */,
 				C54F631C2BEDCA78006A5EDE /* PlayingView.swift */,
 				C513FF9D2BEE0A0F00901350 /* MOJiAudioStateView.swift */,
 				C513FF9F2BEE18C400901350 /* MOJiAudioPlayerView.swift */,
@@ -379,7 +376,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C50D6EB42AC2A0AB006A0505 /* Build configuration list for PBXProject "WWDC23UpdateKit" */;
+			buildConfigurationList = C50D6EB42AC2A0AB006A0505 /* Build configuration list for PBXProject "TNShareApp" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -404,7 +401,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C50D6EC62AC2A0AD006A0505 /* Preview Assets.xcassets in Resources */,
-				C54F631F2BEDCC17006A5EDE /* musicAni01.json in Resources */,
 				C50D6EC32AC2A0AD006A0505 /* Assets.xcassets in Resources */,
 				C50D6ECD2AC3FAB2006A0505 /* Localizable.xcstrings in Resources */,
 			);
@@ -436,7 +432,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WWDC23UpdateKit-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-TNShareApp-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -449,15 +445,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WWDC23UpdateKit/Pods-WWDC23UpdateKit-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-TNShareApp/Pods-TNShareApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WWDC23UpdateKit/Pods-WWDC23UpdateKit-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-TNShareApp/Pods-TNShareApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WWDC23UpdateKit/Pods-WWDC23UpdateKit-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TNShareApp/Pods-TNShareApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -485,7 +481,7 @@
 				C5238FA72AFCD52E00AEBBB7 /* TestLabelLastView.swift in Sources */,
 				C50D6EC12AC2A0AB006A0505 /* Item.swift in Sources */,
 				C54F631D2BEDCA78006A5EDE /* PlayingView.swift in Sources */,
-				C50D6EBD2AC2A0AB006A0505 /* WWDC23UpdateKitApp.swift in Sources */,
+				C50D6EBD2AC2A0AB006A0505 /* TNShareApp.swift in Sources */,
 				C5238FAE2AFCE64700AEBBB7 /* TestYYLabelLastView.swift in Sources */,
 				C5F4DC3C2B282C68000F09E6 /* PushNotificationView.swift in Sources */,
 			);
@@ -638,10 +634,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = WWDC23UpdateKit/WWDC23UpdateKit.entitlements;
+				CODE_SIGN_ENTITLEMENTS = TNShareApp/TNShareApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WWDC23UpdateKit/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TNShareApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 3EW3QF484M;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -668,15 +664,15 @@
 		};
 		C50D6ECB2AC2A0AD006A0505 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 553EF5C6EF51194653F1CDB6 /* Pods-WWDC23UpdateKit.release.xcconfig */;
+			baseConfigurationReference = 34CF8DA4F3CCD4343C54A474 /* Pods-TNShareApp.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = WWDC23UpdateKit/WWDC23UpdateKit.entitlements;
+				CODE_SIGN_ENTITLEMENTS = TNShareApp/TNShareApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WWDC23UpdateKit/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TNShareApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 3EW3QF484M;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -762,7 +758,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C50D6EB42AC2A0AB006A0505 /* Build configuration list for PBXProject "WWDC23UpdateKit" */ = {
+		C50D6EB42AC2A0AB006A0505 /* Build configuration list for PBXProject "TNShareApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C50D6EC72AC2A0AD006A0505 /* Debug */,

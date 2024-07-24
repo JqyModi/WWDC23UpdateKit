@@ -17,7 +17,7 @@
                BlueprintIdentifier = "C50D6EB82AC2A0AB006A0505"
                BuildableName = "TNShareApp.app"
                BlueprintName = "TNShareApp"
-               ReferencedContainer = "container:WWDC23UpdateKit.xcodeproj">
+               ReferencedContainer = "container:TNShareApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,7 +46,7 @@
             BlueprintIdentifier = "C50D6EB82AC2A0AB006A0505"
             BuildableName = "TNShareApp.app"
             BlueprintName = "TNShareApp"
-            ReferencedContainer = "container:WWDC23UpdateKit.xcodeproj">
+            ReferencedContainer = "container:TNShareApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <StoreKitConfigurationFileReference
@@ -66,7 +66,7 @@
             BlueprintIdentifier = "C50D6EB82AC2A0AB006A0505"
             BuildableName = "TNShareApp.app"
             BlueprintName = "TNShareApp"
-            ReferencedContainer = "container:WWDC23UpdateKit.xcodeproj">
+            ReferencedContainer = "container:TNShareApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -1,0 +1,27 @@
+{
+  "name": "DebugKit",
+  "version": "0.0.1",
+  "summary": "A short description of DebugKit.",
+  "description": "DebugKit is a collection of useful debugging tools for iOS apps, including logging utilities, debug views, and more.",
+  "homepage": "http://www.modi.com/DebugKit",
+  "license": "MIT (modi)",
+  "authors": {
+    "jqy": "jiangqiyu@mail.shareintelli.com"
+  },
+  "platforms": {
+    "ios": null
+  },
+  "source": {
+    "git": "http://github.com/JqyModi/DebugKit.git",
+    "tag": "0.0.1"
+  },
+  "source_files": [
+    "DebugKit/Classes",
+    "DebugKit/Classes/**/*.{h,m,swift}"
+  ],
+  "dependencies": {
+    "DoraemonKit/Core": [
+
+    ]
+  }
+}
