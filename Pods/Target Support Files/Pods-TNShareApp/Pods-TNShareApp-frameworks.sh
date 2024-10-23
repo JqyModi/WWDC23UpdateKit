@@ -177,10 +177,7 @@ code_sign_if_enabled() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/CharacterLocationSeeker/CharacterLocationSeeker.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/DebugKit/DebugKit.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/DoraemonKit/DoraemonKit.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/GCDWebServer/GCDWebServer.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/LookinServer/LookinServer.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/YYText/YYText.framework"
@@ -188,10 +185,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/CharacterLocationSeeker/CharacterLocationSeeker.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/DebugKit/DebugKit.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/DoraemonKit/DoraemonKit.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/GCDWebServer/GCDWebServer.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/YYText/YYText.framework"

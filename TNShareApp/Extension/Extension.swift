@@ -225,3 +225,94 @@ public func HexColor(_ hexString: String) -> UIColor {
         get { self.frame.origin.y+self.height }
     }
 }
+
+extension UIViewController {
+    
+    // 获取当前类的所有无参实例方法，并过滤掉系统方法
+    private func getCustomInstanceMethods() -> [Selector] {
+        // 获取 CombineVC 自己的无参实例方法
+        let combineVCMethods = getInstanceMethods(for: type(of: self))
+        
+        // 获取 UIViewController 的无参实例方法
+        let uiViewControllerMethods = getInstanceMethods(for: UIViewController.self)
+        
+        // 排除掉系统的原有方法，只保留 CombineVC 新增的方法
+        return combineVCMethods.filter { !uiViewControllerMethods.contains($0) }
+    }
+    
+    // 获取指定类的无参实例方法
+    private func getInstanceMethods(for cls: AnyClass) -> [Selector] {
+        var methodCount: UInt32 = 0
+        var methods = [Selector]()
+        
+        // 获取类的所有方法列表
+        if let methodList = class_copyMethodList(cls, &methodCount) {
+            for i in 0..<Int(methodCount) {
+                let selector = method_getName(methodList[i])
+                
+                if selector.description.contains("_") {
+                    continue
+                }
+                
+                // 检查方法是否是实例方法，且没有参数
+                if let method = class_getInstanceMethod(cls, selector) {
+                    let argumentCount = method_getNumberOfArguments(method)
+                    if argumentCount == 2 { // 1 for self, 1 for _cmd (表示没有额外参数)
+                        methods.append(selector)
+                    }
+                }
+            }
+            free(methodList)
+        }
+        return methods
+    }
+    
+    // 获取当前类的所有无参实例方法
+    func getInstanceMethods() -> [Selector] {
+        var methodCount: UInt32 = 0
+        var methods = [Selector]()
+        
+        // 获取类的所有方法列表
+        if let methodList = class_copyMethodList(object_getClass(self), &methodCount) {
+            for i in 0..<Int(methodCount) {
+                let selector = method_getName(methodList[i])
+//                let name = NSStringFromSelector(selector)
+                
+                // 检查方法是否是实例方法，且没有参数
+                if let method = class_getInstanceMethod(type(of: self), selector) {
+                    let argumentCount = method_getNumberOfArguments(method)
+                    if argumentCount == 2 { // 1 for self, 1 for _cmd (表示没有额外参数)
+                        methods.append(selector)
+                    }
+                }
+            }
+            free(methodList)
+        }
+        return methods
+    }
+    
+    // 动态创建按钮并绑定到方法
+    func createButtonsForInstanceMethods() {
+        let methods = getCustomInstanceMethods()
+        
+        let scrollView = UIScrollView(frame: self.view.frame)
+        scrollView.contentInset = .init(top: 0, left: 0, bottom: 80, right: 0)
+        self.view.addSubview(scrollView)
+        
+        let buttonHeight: CGFloat = 50
+        let padding: CGFloat = 10
+        
+        for (index, selector) in methods.enumerated() {
+            let button = UIButton(type: .system)
+            button.setTitle(NSStringFromSelector(selector), for: .normal)
+            button.backgroundColor = .systemBlue
+            button.setTitleColor(.white, for: .normal)
+            button.frame = CGRect(x: 20, y: CGFloat(index) * (buttonHeight + padding) + 20, width: self.view.frame.width - 40, height: buttonHeight)
+            button.addTarget(self, action: selector, for: .touchUpInside)
+            
+            scrollView.addSubview(button)
+        }
+        
+        scrollView.contentSize = .init(width: view.width, height: (scrollView.subviews.last?.maxY ?? 0))
+    }
+}

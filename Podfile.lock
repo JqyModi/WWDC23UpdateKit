@@ -1,61 +1,53 @@
 PODS:
   - CharacterLocationSeeker (0.0.3)
-  - DebugKit (0.0.1):
-    - DoraemonKit/Core
-  - DoraemonKit/Core (3.0.7):
-    - FMDB
-    - GCDWebServer
-    - GCDWebServer/WebDAV
-    - GCDWebServer/WebUploader
-  - FMDB (2.7.5):
-    - FMDB/standard (= 2.7.5)
-  - FMDB/standard (2.7.5)
-  - GCDWebServer (3.5.4):
-    - GCDWebServer/Core (= 3.5.4)
-  - GCDWebServer/Core (3.5.4)
-  - GCDWebServer/WebDAV (3.5.4):
-    - GCDWebServer/Core
-  - GCDWebServer/WebUploader (3.5.4):
-    - GCDWebServer/Core
+  - LookinServer (1.2.8):
+    - LookinServer/Core (= 1.2.8)
+  - LookinServer/Core (1.2.8)
   - lottie-ios (4.4.3)
   - MJRefresh (3.7.6)
+  - OpenCombine (0.14.0)
+  - OpenCombineDispatch (0.14.0):
+    - OpenCombine (>= 0.13.0)
+  - OpenCombineFoundation (0.14.0):
+    - OpenCombine (>= 0.13.0)
   - SnapKit (5.6.0)
   - YYText (1.0.7)
 
 DEPENDENCIES:
   - CharacterLocationSeeker
-  - DebugKit (from `/Volumes/WJHD/xcode/Project/MainApp/DebugKit/`)
+  - LookinServer
   - lottie-ios
   - MJRefresh
+  - OpenCombine (~> 0.14.0)
+  - OpenCombineDispatch (~> 0.14.0)
+  - OpenCombineFoundation (~> 0.14.0)
   - SnapKit
   - YYText
 
 SPEC REPOS:
+  https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
+    - OpenCombine
+    - OpenCombineDispatch
+    - OpenCombineFoundation
   trunk:
     - CharacterLocationSeeker
-    - DoraemonKit
-    - FMDB
-    - GCDWebServer
+    - LookinServer
     - lottie-ios
     - MJRefresh
     - SnapKit
     - YYText
 
-EXTERNAL SOURCES:
-  DebugKit:
-    :path: "/Volumes/WJHD/xcode/Project/MainApp/DebugKit/"
-
 SPEC CHECKSUMS:
   CharacterLocationSeeker: fbce5cb6746c2205a003874c5647ee801b088dbf
-  DebugKit: 434d9ef344f89886367cc34e683a8dbfdad82050
-  DoraemonKit: 32fb97f3aa82efa133111d193080ca5462cef135
-  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
-  GCDWebServer: 2c156a56c8226e2d5c0c3f208a3621ccffbe3ce4
+  LookinServer: 1b2b61c6402ae29fa22182d48f5cd067b4e99e80
   lottie-ios: fcb5e73e17ba4c983140b7d21095c834b3087418
   MJRefresh: 2fe7fb43a5167ceda20bb7e63f130c04fd1814a5
+  OpenCombine: 99bf5bc4fce0e34507031a9f277e927bbe25a722
+  OpenCombineDispatch: b52c5950f5f87677293b4d96931168c50b437f91
+  OpenCombineFoundation: bf2d665981bbc59fa99f34302d457a520297df8f
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 0d10fee1dc805f4b4c951ce624e03a0bf9f5d1d4
+PODFILE CHECKSUM: daf1c73ac1c2d81e682c8b13aee7c59ac38288ea
 
 COCOAPODS: 1.15.2

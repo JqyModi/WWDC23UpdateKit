@@ -7,7 +7,6 @@
 
 import SwiftUI
 import SwiftData
-import DebugKit
 
 @main
 struct TNShareApp: App {
@@ -48,13 +47,15 @@ struct TNShareApp: App {
 //            TestLabelLastView()
 //            AICodeVCView()
 //            PlayingView()
-            AudioStateView()
+//            AudioStateView()
 //            AudioPlayerView()
 //            MOJiAudioSettingView()
 //            RadioButtonGroupView()
 //            GearSliderView()
 //            UICowView()
 //            StoreKit2View()
+//            AutoLayoutCollectionView()
+            CombineView()
 //                .onAppear {
 //                    DebugKit.shared.setup(config: DebugConfigHelper())
 //                    let scenes = UIApplication.shared.connectedScenes

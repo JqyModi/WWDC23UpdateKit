@@ -1,5 +1,8 @@
 platform :ios, '13.0'
 
+source 'git@gzoffice.mojidict.com:moji-cocoapods/self-crafted-libs.git'
+source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
+
 inhibit_all_warnings!
 
 target 'TNShareApp' do
@@ -10,8 +13,21 @@ target 'TNShareApp' do
   pod 'YYText'
   pod 'SnapKit'
   
-  pod 'DebugKit', :path => '/Volumes/WJHD/xcode/Project/MainApp/DebugKit/'
+#  pod 'DebugKit', :path => '/Volumes/WJHD/xcode/Project/MainApp/DebugKit/'
   pod 'lottie-ios'
+  pod 'LookinServer', :configurations => ['Debug']
+  
+#  pod 'Parse', '1.19.4'
+#  pod 'MOJiCloud_fw', '1.0.15'
+  
+end
+
+target 'TestOpenCombine' do
+  use_frameworks!
+  
+  pod 'OpenCombine', '~> 0.14.0'
+  pod 'OpenCombineDispatch', '~> 0.14.0'
+  pod 'OpenCombineFoundation', '~> 0.14.0'
   
 end
 
