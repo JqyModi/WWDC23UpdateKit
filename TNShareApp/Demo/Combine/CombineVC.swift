@@ -290,6 +290,57 @@ class CombineVC: UIViewController {
     }
 }
 
+@objc extension CombineVC {
+    class Model {
+        @Published var title: String = ""
+    }
+
+    func modifier() {
+        let model = Model()
+        
+        model.$title.sink(receiveValue: {
+            print($0)
+        })
+        .store(in: &cancellables)
+        
+        model.title = "JJ"
+        model.title = "KK"
+    }
+}
+
+@objc extension CombineVC {
+    func connect() {
+        let model = Model()
+        
+        model.$title
+            .share()
+            .makeConnectable()
+//            .connect()
+            .sink(receiveValue: {
+            print($0)
+        })
+    }
+    
+    func connect1() {
+        let pub = (1...3).publisher
+            .delay(for: 1, scheduler: DispatchQueue.main)
+            .map( { _ in return Int.random(in: 0...100) } )
+//            .print("Random")
+//            .share()
+            .makeConnectable()
+
+
+        pub
+            .sink { print ("Stream 1 received: \($0)")}.store(in: &cancellables)
+        pub
+            .sink { print ("Stream 2 received: \($0)")}.store(in: &cancellables)
+        pub
+            .sink { print ("Stream 3 received: \($0)")}.store(in: &cancellables)
+        
+        pub.connect().store(in: &cancellables)
+    }
+}
+
 //#Preview {
 //    CombineVC()
 //}
