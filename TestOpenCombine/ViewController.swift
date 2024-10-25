@@ -19,7 +19,8 @@ class ViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         
-        test()
+//        test()
+        customSub()
     }
     
     func test() {
@@ -30,5 +31,30 @@ class ViewController: UIViewController {
 //        NotificationCenter.default.ocombine.publisher(for: .NSSystemClockDidChange).sink(receiveValue: <#T##(Notification) -> Void#>)
     }
     
+    func customSub() {
+        final class CustomSubscriber: Subscriber {
+            typealias Input = String
+            typealias Failure = Never
+
+            func receive(subscription: Subscription) {
+                print("Subscribed!")
+                // Subscription继承了Cancellable可以用来取消订阅
+                subscription.request(.unlimited) // 请求无限个值
+            }
+
+            func receive(_ input: String) -> Subscribers.Demand {
+                print("Received input: \(input)")
+                return .none // 表示不需要更多的值
+            }
+
+            func receive(completion: Subscribers.Completion<Never>) {
+                print("Received completion: \(completion)")
+            }
+        }
+
+        let customSubscriber = CustomSubscriber()
+        let customPublisher = ["A", "B", "C"].publisher
+        customPublisher.subscribe(customSubscriber)
+    }
 }
 

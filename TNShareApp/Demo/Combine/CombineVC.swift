@@ -55,6 +55,7 @@ class CombineVC: UIViewController {
         publisher.sink { item in
             print("item = ", item)
         }
+        .store(in: &cancellables)
     }
     
     func future() async {
@@ -100,7 +101,7 @@ class CombineVC: UIViewController {
 
         currentValueSubject.send(20)
         // 新订阅者会立即收到最新值
-        let newSubscriber = currentValueSubject.sink { value in
+        currentValueSubject.sink { value in
             print("New Subscriber Received: \(value)")
         }
         // 输出:
@@ -163,6 +164,7 @@ class CombineVC: UIViewController {
 
             func receive(subscription: Subscription) {
                 print("Subscribed!")
+                // Subscription继承了Cancellable可以用来取消订阅
                 subscription.request(.unlimited) // 请求无限个值
             }
 
@@ -177,10 +179,6 @@ class CombineVC: UIViewController {
         }
 
         let customSubscriber = CustomSubscriber()
-        ["":1, "": "2"].publisher.sink { dict in
-            print(dict.key)
-        }
-        
         let customPublisher = ["A", "B", "C"].publisher
         customPublisher.subscribe(customSubscriber)
         // 输出:
